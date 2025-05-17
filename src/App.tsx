@@ -1,11 +1,18 @@
 import { Route, Routes } from "react-router";
 import HomePage from "./pages/HomePage";
+import { MainPage } from "./pages/MainPage";
+import PersonListPage from "./pages/PersonListPage";
+
+
 
 function App() {
   return (
     <div id="App">
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/Main" element={<MainPage />} />
+        <Route path="/people" element={<PersonListPage />} />
+        {/* <Route path="/Films" element={<FilmList />} /> */}
       </Routes>
     </div>
   );
