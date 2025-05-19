@@ -10,7 +10,7 @@ const instance = axios.create({
   },
 });
 
-const delay = async (waitTime = 2000) => {
+const delay = async (waitTime = 1500) => {
   await new Promise((res) => setTimeout(res, waitTime));
 };
 

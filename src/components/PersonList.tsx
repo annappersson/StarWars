@@ -3,9 +3,9 @@ import type { ApiResponse, Person } from "../types/StarWarsTypes";
 import { getAllPeople } from "../services/StarWarsAPI";
 import { Alert, ListGroup } from "react-bootstrap";
 import { Link } from "react-router";
-import shipImg from "../assets/img/starWarsShip.gif";
 import "../assets/scss/LoadingSpinner.scss";
 import Pagination from "./Pagination";
+import LoadingSpinner from "./LoadingSpinner";
 
 export const PersonList = () => {
   const [searchResult, setSearchResult] = useState<ApiResponse<Person> | null>(
@@ -43,12 +43,7 @@ export const PersonList = () => {
 
   return (
     <>
-      {isLoading && (
-        <div className="spinner" role="status">
-          <img src={shipImg} alt="Star wars ship flying" />
-          <span className="visually-hidden">Loading...</span>
-        </div>
-      )}
+      {isLoading && <LoadingSpinner />}
 
       {!isLoading && error && <Alert variant="danger">{error}</Alert>}
 
