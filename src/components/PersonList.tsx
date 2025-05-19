@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import type { ApiResponse, Person } from "../types/StarWarsTypes";
 import { getAllPeople } from "../services/StarWarsAPI";
-import { Alert, ListGroup } from "react-bootstrap";
-import { Link } from "react-router";
+import { Alert } from "react-bootstrap";
 import "../assets/scss/LoadingSpinner.scss";
+import "../assets/scss/PersonListPage.scss";
 import Pagination from "./Pagination";
 import LoadingSpinner from "./LoadingSpinner";
+import PersonCard from "./PersonCard";
 
 export const PersonList = () => {
   const [searchResult, setSearchResult] = useState<ApiResponse<Person> | null>(
@@ -52,19 +53,12 @@ export const PersonList = () => {
       )}
 
       {!isLoading && searchResult && (
-        <div id="search-result">
-          <ListGroup className="personlist">
+        <div>
+          <div className="person-container">
             {searchResult.data.map((person) => (
-              <ListGroup.Item
-                action
-                as={Link}
-                key={person.id}
-                to={`/person/${person.id}`}
-              >
-                <span className="todo-title">{person.name}</span>
-              </ListGroup.Item>
+              <PersonCard key={person.id} person={person} />
             ))}
-          </ListGroup>
+          </div>
 
           <Pagination
             page={searchResult.current_page}

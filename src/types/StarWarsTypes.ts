@@ -4,6 +4,7 @@ export interface Person {
   height: string;
   birth_year: string;
   films: string[];
+  image_url: string;
 }
 
 export interface Film {
