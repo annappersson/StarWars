@@ -5,8 +5,6 @@ export const PersonListPage = () => {
   return (
     <>
       <PersonList />
-
-      <Pagination />
     </>
   );
 };

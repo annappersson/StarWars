@@ -17,10 +17,7 @@ export interface Film {
 
 export interface ApiResponse<T> {
   current_page: number;
+  last_page: number;
   data: T[];
-  first_page: string;
-  last_page: string;
-  next_page: string | null;
-  prev_page: string | null;
   total: number;
 }

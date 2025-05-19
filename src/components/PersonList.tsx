@@ -73,9 +73,9 @@ export const PersonList = () => {
 
           <Pagination
             page={searchResult.current_page}
-            totalPages={searchResult.total}
-            hasPreviousPage={searchResult.total > 1}
-            hasNextPage={page < searchResult.total}
+            totalPages={searchResult.last_page}
+            hasPreviousPage={page > 1}
+            hasNextPage={page < searchResult.last_page}
             onPreviousPage={() => setPage((p) => p - 1)}
             onNextPage={() => setPage((p) => p + 1)}
           />
