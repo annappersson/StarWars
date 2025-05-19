@@ -1,4 +1,4 @@
-import { PersonList } from '../components/lists/PersonList';
+import { PersonList } from '../components/PersonList';
 
 export const PersonListPage = () => {
   return (

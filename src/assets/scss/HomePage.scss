@@ -25,16 +25,16 @@ $heading-color: #FFE81F;
 }
 
 .btn-secondary {
-    background-color: #1a1a1a; 
-    color: #FFE81F;
-    border: 1px solid #FFE81F;
+    background-color: #1a1a1a !important;  
+    color: $heading-color !important;
+    border: 1px solid $heading-color !important;
 }
 
 .btn-secondary:hover {
     cursor: url("/img/cursorYellow.cur"), auto;
-    background-color: #FFE81F;
-    color: #000;
-    border: 1px solid #FFE81F;
+    background-color: $heading-color !important;
+    color: #000 !important;
+    border: 1px solid $heading-color !important;
 }
 
 .intro-text {
