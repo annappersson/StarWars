@@ -1,13 +1,12 @@
-import React from 'react'
-import Navigation from '../components/Navigation'
+import Navigation from "../components/Navigation";
 
 export const MainPage = () => {
   return (
     <>
-    <Navigation />
+      <Navigation />
+      <p>Here you can find information</p>
     </>
-    
-  )
-}
+  );
+};
 
 export default MainPage;
