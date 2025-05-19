@@ -1,9 +1,14 @@
-import { PersonList } from '../components/PersonList';
+import { Pagination } from "react-bootstrap";
+import { PersonList } from "../components/PersonList";
 
 export const PersonListPage = () => {
   return (
-    <PersonList />
-  )
-}
+    <>
+      <PersonList />
+
+      <Pagination />
+    </>
+  );
+};
 
 export default PersonListPage;

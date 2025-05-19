@@ -32,6 +32,6 @@ export const SinglePerson = async (id: number) => {
   return get<Person>(`/people/?search=${id}`);
 };
 
-export const getAllPeople = async () => {
-  return get<ApiResponse<Person>>(`/people?page=1`);
+export const getAllPeople = async (page = 1) => {
+  return get<ApiResponse<Person>>(`/people?page=${page}`);
 };
