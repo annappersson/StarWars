@@ -2,9 +2,17 @@
 
 $heading-color: #FFE81F;
 
-* {
-    margin: 0;
-    padding: 0;
+body {
+    height: 100vh;
+    background-color: #1a1a1a;
+}
+
+#root {
+    width: 80vw;
+    background-color: rgb(61, 124, 180);
+    overflow: hidden;
+    padding: 0 !important;
+    margin: auto;
 }
 
 

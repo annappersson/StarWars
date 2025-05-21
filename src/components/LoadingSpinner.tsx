@@ -4,11 +4,13 @@ import "../assets/scss/LoadingSpinner.scss";
 const LoadingSpinner = () => {
   return (
     <>
-      <div className="spinner img-fluid" role="status">
-        <img src={shipImg} alt="Star wars ship flying" />
+      <div className="spinner-container">
+        <div className="spinner img-fluid" role="status">
+          <img src={shipImg} alt="Star wars ship flying" />
 
-        <div className="loader-container">
-          <span className="loader">Flying through the Galaxy</span>
+          <div className="loader-container">
+            <span className="loader">Flying through the Galaxy</span>
+          </div>
         </div>
       </div>
     </>

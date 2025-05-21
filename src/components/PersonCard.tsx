@@ -1,6 +1,6 @@
-import { Button, Card, CardGroup, ListGroup } from "react-bootstrap";
+import { Card, CardGroup, ListGroup, Nav } from "react-bootstrap";
 import type { Person } from "../types/StarWarsTypes";
-import { Link } from "react-router";
+import { NavLink } from "react-router";
 
 type PersonProps = {
   person: Person;
@@ -9,13 +9,8 @@ type PersonProps = {
 const PersonCard = ({ person }: PersonProps) => {
   return (
     <CardGroup>
-      <Card>
-        <Card.Img
-          variant="top"
-          src={person.image_url}
-          alt={person.name}
-          className="fluid"
-        />
+      <Card className="h-100">
+        {/* <Card.Img variant="top" src={person.image_url} alt={person.name} /> */}
         <Card.Body>
           <Card.Title>{person.name}</Card.Title>
           <Card.Text>
@@ -24,14 +19,15 @@ const PersonCard = ({ person }: PersonProps) => {
               <ListGroup.Item>Height: {person.height} cm</ListGroup.Item>
             </ListGroup>
           </Card.Text>
-          <Link
-            to="/PersonPage"
-            className="button btn btn-secondary"
+
+          <Nav.Link
+            as={NavLink}
+            to="/person"
+            className="btn btn-secondary mt-auto"
             role="button"
           >
-            {" "}
-            Readm more
-          </Link>
+            Read more
+          </Nav.Link>
         </Card.Body>
       </Card>
     </CardGroup>

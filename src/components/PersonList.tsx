@@ -53,22 +53,23 @@ export const PersonList = () => {
       )}
 
       {!isLoading && searchResult && (
-        <div>
+        <>
           <div className="person-container">
             {searchResult.data.map((person) => (
               <PersonCard key={person.id} person={person} />
             ))}
           </div>
-
-          <Pagination
-            page={searchResult.current_page}
-            totalPages={searchResult.last_page}
-            hasPreviousPage={page > 1}
-            hasNextPage={page < searchResult.last_page}
-            onPreviousPage={() => setPage((p) => p - 1)}
-            onNextPage={() => setPage((p) => p + 1)}
-          />
-        </div>
+          <div id="buttons">
+            <Pagination
+              page={searchResult.current_page}
+              totalPages={searchResult.last_page}
+              hasPreviousPage={page > 1}
+              hasNextPage={page < searchResult.last_page}
+              onPreviousPage={() => setPage((p) => p - 1)}
+              onNextPage={() => setPage((p) => p + 1)}
+            />
+          </div>
+        </>
       )}
     </>
   );
