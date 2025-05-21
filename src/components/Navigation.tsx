@@ -17,6 +17,9 @@ export const Navigation = () => {
           <Nav.Link as={NavLink} to="/people">
             People
           </Nav.Link>
+          <Nav.Link as={NavLink} to="/films">
+            Film
+          </Nav.Link>
         </Nav>
       </Container>
     </Navbar>

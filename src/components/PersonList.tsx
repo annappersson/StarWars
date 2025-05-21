@@ -8,10 +8,8 @@ import Pagination from "./Pagination";
 import LoadingSpinner from "./LoadingSpinner";
 import PersonCard from "./PersonCard";
 
-export const PersonList = () => {
-  const [searchResult, setSearchResult] = useState<ApiResponse<Person> | null>(
-    null
-  );
+const PersonList = () => {
+  const [getResult, setGetResult] = useState<ApiResponse<Person> | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | false>(false);
   const [page, setPage] = useState(1);
@@ -19,12 +17,12 @@ export const PersonList = () => {
   const fetchPeople = async () => {
     setError(false);
     setIsLoading(true);
-    setSearchResult(null);
+    setGetResult(null);
 
     try {
       const data = await getAllPeople(page);
       setIsLoading(false);
-      setSearchResult(data);
+      setGetResult(data);
 
       console.log("Fetched data:", data);
     } catch (err) {
@@ -48,23 +46,23 @@ export const PersonList = () => {
 
       {!isLoading && error && <Alert variant="danger">{error}</Alert>}
 
-      {!isLoading && !error && !searchResult && (
+      {!isLoading && !error && !getResult && (
         <Alert variant="warning">no people 😩</Alert>
       )}
 
-      {!isLoading && searchResult && (
+      {!isLoading && getResult && (
         <>
           <div className="person-container">
-            {searchResult.data.map((person) => (
+            {getResult.data.map((person) => (
               <PersonCard key={person.id} person={person} />
             ))}
           </div>
           <div id="buttons">
             <Pagination
-              page={searchResult.current_page}
-              totalPages={searchResult.last_page}
+              page={getResult.current_page}
+              totalPages={getResult.last_page}
               hasPreviousPage={page > 1}
-              hasNextPage={page < searchResult.last_page}
+              hasNextPage={page < getResult.last_page}
               onPreviousPage={() => setPage((p) => p - 1)}
               onNextPage={() => setPage((p) => p + 1)}
             />
@@ -74,3 +72,5 @@ export const PersonList = () => {
     </>
   );
 };
+
+export default PersonList;

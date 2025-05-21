@@ -4,6 +4,7 @@ import { MainPage } from "./pages/MainPage";
 import PersonListPage from "./pages/PersonListPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import SinglePerson from "./components/SinglePerson";
+import FilmPage from "./pages/FilmPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/Main" element={<MainPage />} />
         <Route path="/people" element={<PersonListPage />} />
         <Route path="/person" element={<SinglePerson />} />
+        <Route path="/films" element={<FilmPage />} />
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

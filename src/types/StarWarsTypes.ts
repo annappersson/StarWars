@@ -14,6 +14,8 @@ export interface Film {
   producer: string;
   director: string;
   charachter: string[];
+  image_url: string;
+  release_date: string;
 }
 
 export interface ApiResponse<T> {

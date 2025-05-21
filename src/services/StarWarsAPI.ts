@@ -25,8 +25,8 @@ export const SingleFilm = async (id: number) => {
 };
 
 //All film
-export const Films = async (page = 1) => {
-  return get<Film>(`/films/?search=page=${page}`);
+export const getAllFilms = async () => {
+  return get<ApiResponse<Film>>(`/films`);
 };
 
 //one Person

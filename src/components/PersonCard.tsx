@@ -9,8 +9,7 @@ interface PersonProps {
 const PersonCard: React.FC<PersonProps> = ({ person }) => {
   return (
     <CardGroup>
-      <Card className="h-100 d-flex flex-column">
-        {/* <Card.Img variant="top" src={person.image_url} alt={person.name} /> */}
+      <Card border="warning">
         <Card.Body className="d-flex flex-column">
           <Card.Title>{person.name}</Card.Title>
           <ListGroup variant="flush" className="mb-3">
