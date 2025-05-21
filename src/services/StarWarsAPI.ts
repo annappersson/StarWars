@@ -24,14 +24,17 @@ export const SingleFilm = async (id: number) => {
   return get<Film>(`/films/?search=${id}`);
 };
 
-export const Films = async (query: string, page = 1) => {
-  return get<Film>(`/films/?search=${query}page=${page}`);
+//All film
+export const Films = async (page = 1) => {
+  return get<Film>(`/films/?search=page=${page}`);
 };
 
+//one Person
 export const SinglePerson = async (id: number) => {
   return get<Person>(`/people/?search=${id}`);
 };
 
+//Alla People
 export const getAllPeople = async (page = 1) => {
   return get<ApiResponse<Person>>(`/people?page=${page}`);
 };

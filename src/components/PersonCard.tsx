@@ -2,32 +2,32 @@ import { Card, CardGroup, ListGroup, Nav } from "react-bootstrap";
 import type { Person } from "../types/StarWarsTypes";
 import { NavLink } from "react-router";
 
-type PersonProps = {
+interface PersonProps {
   person: Person;
-};
+}
 
-const PersonCard = ({ person }: PersonProps) => {
+const PersonCard: React.FC<PersonProps> = ({ person }) => {
   return (
     <CardGroup>
-      <Card className="h-100">
+      <Card className="h-100 d-flex flex-column">
         {/* <Card.Img variant="top" src={person.image_url} alt={person.name} /> */}
-        <Card.Body>
+        <Card.Body className="d-flex flex-column">
           <Card.Title>{person.name}</Card.Title>
-          <Card.Text>
-            <ListGroup variant="flush">
-              <ListGroup.Item>Birth-Year: {person.birth_year}</ListGroup.Item>
-              <ListGroup.Item>Height: {person.height} cm</ListGroup.Item>
-            </ListGroup>
-          </Card.Text>
+          <ListGroup variant="flush" className="mb-3">
+            <ListGroup.Item>Birth-Year: {person.birth_year}</ListGroup.Item>
+            <ListGroup.Item>Height: {person.height} cm</ListGroup.Item>
+          </ListGroup>
 
-          <Nav.Link
-            as={NavLink}
-            to="/person"
-            className="btn btn-secondary mt-auto"
-            role="button"
-          >
-            Read more
-          </Nav.Link>
+          <div className="mt-auto">
+            <Nav.Link
+              as={NavLink}
+              to="/person"
+              className="btn btn-secondary w-100"
+              role="button"
+            >
+              Read more
+            </Nav.Link>
+          </div>
         </Card.Body>
       </Card>
     </CardGroup>

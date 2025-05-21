@@ -1,0 +1,15 @@
+@import "bootstrap/scss/bootstrap";
+@import "HomePage.scss";
+@import "PersonListPage.scss";
+
+#buttons {
+    background-color: #212529;
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 1rem;
+    color: $text-color
+}
+
