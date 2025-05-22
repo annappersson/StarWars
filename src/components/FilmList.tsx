@@ -9,7 +9,7 @@ import FilmCard from "./FilmCard";
 import "../assets/scss/PersonListPage.scss";
 
 const FilmList = () => {
-  const [getResult, setGetResult] = useState<ApiResponse<Film> | null>(null);
+  const [getResult, setGetResult] = useState<ApiResponse<Film[]> | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | false>(false);
   const [page, setPage] = useState(1);
@@ -20,7 +20,7 @@ const FilmList = () => {
     setGetResult(null);
 
     try {
-      const data = await getAllFilms();
+      const data = await getAllFilms(page);
       setIsLoading(false);
       setGetResult(data);
 
@@ -38,7 +38,7 @@ const FilmList = () => {
 
   useEffect(() => {
     fetchFilm();
-  }, []);
+  }, [page]);
 
   return (
     <>

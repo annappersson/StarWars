@@ -25,16 +25,16 @@ export const SingleFilm = async (id: number) => {
 };
 
 //All film
-export const getAllFilms = async () => {
-  return get<ApiResponse<Film>>(`/films`);
+export const getAllFilms = async (page = 1) => {
+  return get<ApiResponse<Film[]>>(`/films?page=${page}`);
 };
 
 //one Person
-export const SinglePerson = async (id: number) => {
-  return get<Person>(`/people/?search=${id}`);
+export const getPerson = async (id: number) => {
+  return get<Person>(`/people/${id}`);
 };
 
 //Alla People
 export const getAllPeople = async (page = 1) => {
-  return get<ApiResponse<Person>>(`/people?page=${page}`);
+  return get<ApiResponse<Person[]>>(`/people?/page=${page}`);
 };

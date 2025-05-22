@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/Main" element={<MainPage />} />
         <Route path="/people" element={<PersonListPage />} />
-        <Route path="/person" element={<SinglePerson />} />
+        <Route path="/people/:id" element={<SinglePerson />} />
         <Route path="/films" element={<FilmPage />} />
 
         <Route path="*" element={<NotFoundPage />} />

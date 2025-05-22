@@ -3,9 +3,14 @@ export interface Person {
   name: string;
   height: string;
   birth_year: string;
-  films: string[];
+  films: FilmTitle[];
   image_url: string;
 }
+
+export type FilmTitle = {
+  id: number;
+  title: string;
+};
 
 export interface Film {
   id: number;
@@ -21,6 +26,6 @@ export interface Film {
 export interface ApiResponse<T> {
   current_page: number;
   last_page: number;
-  data: T[];
+  data: T;
   total: number;
 }

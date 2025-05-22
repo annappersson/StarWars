@@ -9,7 +9,9 @@ import LoadingSpinner from "./LoadingSpinner";
 import PersonCard from "./PersonCard";
 
 const PersonList = () => {
-  const [getResult, setGetResult] = useState<ApiResponse<Person> | null>(null);
+  const [getResult, setGetResult] = useState<ApiResponse<Person[]> | null>(
+    null
+  );
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | false>(false);
   const [page, setPage] = useState(1);

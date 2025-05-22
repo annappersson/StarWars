@@ -20,7 +20,8 @@ const PersonCard: React.FC<PersonProps> = ({ person }) => {
           <div className="mt-auto">
             <Nav.Link
               as={NavLink}
-              to="/person"
+              key={person.id}
+              to={`/people/${person.id}`}
               className="btn btn-secondary w-100"
               role="button"
             >
