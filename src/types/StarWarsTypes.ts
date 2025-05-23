@@ -3,6 +3,8 @@ export interface Person {
   name: string;
   height: string;
   birth_year: string;
+  eye_color: string;
+  hair_color: string;
   films: FilmTitle[];
   image_url: string;
 }

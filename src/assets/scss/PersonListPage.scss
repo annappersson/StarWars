@@ -10,12 +10,13 @@
 
 
 .person-container {
+    min-height: 100vh;
     display: grid;
     grid-template-columns: repeat(5, 1fr); 
     gap: 1.5rem;
     padding: 2rem;
     margin: auto;
-    background-color: #ffffff8c;
+    background-color: $background-color;
   
   @media (max-width: 1200px) {
     grid-template-columns: repeat(4, 1fr);

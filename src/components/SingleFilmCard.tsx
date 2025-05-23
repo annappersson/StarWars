@@ -26,15 +26,10 @@ const SingleFilmCard: React.FC<FilmProps> = ({ film }) => {
                   key={characters.id}
                   to={`/people/${characters.id}`}
                 >
-                  <span className="charachter-name">{characters.name}</span>
+                  <span className="character-name">{characters.name}</span>
                 </ListGroup.Item>
               ))}
             </ListGroup>
-
-            {/* <ListGroup.Item>
-              Films:
-              <ul>{person?.films.map((x) => x.title).join(", ")}</ul>
-            </ListGroup.Item> */}
           </ListGroup>
 
           <div className="mt-auto">
