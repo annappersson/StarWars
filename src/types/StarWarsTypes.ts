@@ -18,10 +18,15 @@ export interface Film {
   opening_crawl: string;
   producer: string;
   director: string;
-  charachter: string[];
+  characters: Person[];
   image_url: string;
   release_date: string;
 }
+
+export type PersonName = {
+  id: number;
+  name: string;
+};
 
 export interface ApiResponse<T> {
   current_page: number;

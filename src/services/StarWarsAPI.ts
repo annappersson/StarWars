@@ -20,8 +20,8 @@ const get = async <T>(endpoint: string) => {
   return res.data;
 };
 
-export const SingleFilm = async (id: number) => {
-  return get<Film>(`/films/?search=${id}`);
+export const getFilm = async (id: number) => {
+  return get<Film>(`/films/${id}`);
 };
 
 //All film

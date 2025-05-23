@@ -5,7 +5,7 @@ import PersonListPage from "./pages/PersonListPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import SinglePerson from "./components/SinglePerson";
 import FilmPage from "./pages/FilmPage";
-import SingleFilmPage from "./pages/SingleFilmPage";
+import SingleFilm from "./components/SingleFilm";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Route path="/people" element={<PersonListPage />} />
         <Route path="/people/:id" element={<SinglePerson />} />
         <Route path="/films" element={<FilmPage />} />
-        <Route path="/films/:id" element={<SingleFilmPage />} />
+        <Route path="/films/:id" element={<SingleFilm />} />
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
