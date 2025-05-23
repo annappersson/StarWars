@@ -1,30 +1,29 @@
 import { useEffect, useState } from "react";
-import type { Person } from "../types/StarWarsTypes";
-import { getPerson } from "../services/StarWarsAPI";
+import type { Film } from "../types/StarWarsTypes";
+import { getFilm } from "../services/StarWarsAPI";
 import { useParams } from "react-router";
 import { Alert } from "react-bootstrap";
 import LoadingSpinner from "../components/LoadingSpinner";
-import SinglePersonCard from "../components/SinglePersonCard";
-import "../assets/scss/PersonPage.scss";
+import SingleFilmCard from "../components/FilmDetailCard";
 import Navigation from "../components/Navigation";
 
-const SinglePersonPage = () => {
-  const [getPersonData, setGetPersonData] = useState<Person | null>(null);
+const SingleFilmPage = () => {
+  const [getFilmData, setGetFilmData] = useState<Film | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | false>(false);
   const { id } = useParams();
-  const peopleId = Number(id);
+  const filmId = Number(id);
 
-  const fetchPerson = async (id: number) => {
+  const fetchFilm = async (id: number) => {
     setError(false);
     setIsLoading(true);
-    setGetPersonData(null);
+    setGetFilmData(null);
 
     try {
-      const data = await getPerson(id);
+      const data = await getFilm(id);
 
       console.log("Fetched data:", data);
-      setGetPersonData(data);
+      setGetFilmData(data);
     } catch (err) {
       console.error(`Error thrown when trying to get the person:`, err);
       setError(
@@ -37,8 +36,8 @@ const SinglePersonPage = () => {
   };
 
   useEffect(() => {
-    fetchPerson(peopleId);
-  }, [peopleId]);
+    fetchFilm(filmId);
+  }, [filmId]);
 
   return (
     <>
@@ -47,17 +46,17 @@ const SinglePersonPage = () => {
 
       {!isLoading && error && <Alert variant="danger">{error}</Alert>}
 
-      {!isLoading && !error && !getPersonData && (
-        <Alert variant="warning">no people 😩</Alert>
+      {!isLoading && !error && !getFilmData && (
+        <Alert variant="warning">no film 😩</Alert>
       )}
 
-      {!isLoading && getPersonData && (
-        <div className="personCard-container">
-          <SinglePersonCard key={getPersonData.id} person={getPersonData} />
+      {!isLoading && getFilmData && (
+        <div className="film-container">
+          <SingleFilmCard key={getFilmData.id} film={getFilmData} />
         </div>
       )}
     </>
   );
 };
 
-export default SinglePersonPage;
+export default SingleFilmPage;

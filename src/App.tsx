@@ -4,8 +4,8 @@ import { MainPage } from "./pages/MainPage";
 import PersonListPage from "./pages/PersonListPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import FilmPage from "./pages/FilmPage";
-import SinglePersonPage from "./pages/SinglePersonPage";
-import SingleFilmPage from "./pages/SingleFilmPage";
+import SinglePersonPage from "./pages/PersonDetailPage";
+import SingleFilmPage from "./pages/FilmDetailPage";
 
 function App() {
   return (
