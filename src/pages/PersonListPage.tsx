@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import type { ApiResponse, Person } from "../types/StarWarsTypes";
 import { getAllPeople } from "../services/StarWarsAPI";
-import { Alert } from "react-bootstrap";
+import { Alert, Image } from "react-bootstrap";
 import "../assets/scss/LoadingSpinner.scss";
 import "../assets/scss/PersonListPage.scss";
 import Pagination from "../components/Pagination";
 import LoadingSpinner from "../components/LoadingSpinner";
 import PersonCard from "../components/PersonCard";
 import Navigation from "../components/Navigation";
+import vaderKitty from "../assets/img/catVader.gif";
 
 const PersonListPage = () => {
   const [getResult, setGetResult] = useState<ApiResponse<Person[]> | null>(
@@ -50,7 +51,12 @@ const PersonListPage = () => {
       {!isLoading && error && <Alert variant="danger">{error}</Alert>}
 
       {!isLoading && !error && !getResult && (
-        <Alert variant="warning">no people 😩</Alert>
+        <>
+          <div className="waring">
+            <Image src={vaderKitty} alt="A kitty holding lightsaber" />
+            <Alert variant="warning">no people found in this galaxy😩</Alert>
+          </div>
+        </>
       )}
 
       {!isLoading && getResult && (

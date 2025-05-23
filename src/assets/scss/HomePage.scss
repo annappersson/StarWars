@@ -122,3 +122,24 @@ body{
     z-index:1;
     animation:move-twink-back 200s linear infinite;
   }
+
+  .waring{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin: auto;
+  }
+
+  .alert-waring{
+    width: 50%;
+  }
+
+  .waring img{
+    width: 50%;
+  }
