@@ -1,33 +1,25 @@
 @import "bootstrap/scss/bootstrap";
-@import "HomePage.scss";
+
 
 .personCard-container {
-    height: 80vh;
-    background-color: $background-color;
-    display: flex;
-    align-items: center;
-  }
-  
-.personCard{
-    width: 100%;
-    max-width: 60rem; 
+    min-height: 100%;
     display: flex;
     flex-wrap: wrap;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    margin: auto;
     justify-content: center;
-}
+    padding-top: 2rem;
+  }
+  
+
 
   .person-card {
     width: 100%;
     max-width: 60rem; 
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     border-radius: 0.5rem;
     overflow: hidden;
-    margin: auto;
-    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   
     .person-image {
       flex: 1 1 40%;

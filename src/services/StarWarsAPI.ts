@@ -36,5 +36,5 @@ export const getPerson = async (id: number) => {
 
 //Alla People
 export const getAllPeople = async (page = 1) => {
-  return get<ApiResponse<Person[]>>(`/people?/page=${page}`);
+  return get<ApiResponse<Person[]>>(`/people?page=${page}`);
 };

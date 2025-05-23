@@ -4,11 +4,11 @@ import { getPerson } from "../services/StarWarsAPI";
 import { useParams } from "react-router";
 import { Alert } from "react-bootstrap";
 import LoadingSpinner from "../components/LoadingSpinner";
-import SinglePersonCard from "../components/PersonDetailCard";
+import PersonDetailCard from "../components/PersonDetailCard";
 import "../assets/scss/PersonDetailPage.scss";
 import Navigation from "../components/Navigation";
 
-const SinglePersonPage = () => {
+const PersonDetailPage = () => {
   const [getPersonData, setGetPersonData] = useState<Person | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | false>(false);
@@ -53,11 +53,11 @@ const SinglePersonPage = () => {
 
       {!isLoading && getPersonData && (
         <div className="personCard-container">
-          <SinglePersonCard key={getPersonData.id} person={getPersonData} />
+          <PersonDetailCard key={getPersonData.id} person={getPersonData} />
         </div>
       )}
     </>
   );
 };
 
-export default SinglePersonPage;
+export default PersonDetailPage;

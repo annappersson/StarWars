@@ -4,8 +4,8 @@ import { MainPage } from "./pages/MainPage";
 import PersonListPage from "./pages/PersonListPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import FilmPage from "./pages/FilmPage";
-import SinglePersonPage from "./pages/PersonDetailPage";
-import SingleFilmPage from "./pages/FilmDetailPage";
+import PersonDetailPage from "./pages/PersonDetailPage";
+import FilmDetailPage from "./pages/FilmDetailPage";
 
 function App() {
   return (
@@ -14,9 +14,9 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/Main" element={<MainPage />} />
         <Route path="/people" element={<PersonListPage />} />
-        <Route path="/people/:id" element={<SinglePersonPage />} />
+        <Route path="/people/:id" element={<PersonDetailPage />} />
         <Route path="/films" element={<FilmPage />} />
-        <Route path="/films/:id" element={<SingleFilmPage />} />
+        <Route path="/films/:id" element={<FilmDetailPage />} />
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

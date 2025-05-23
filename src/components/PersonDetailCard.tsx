@@ -7,9 +7,9 @@ interface PersonProps {
   person: Person;
 }
 
-const SinglePersonCard: React.FC<PersonProps> = ({ person }) => {
+const PersonDetialCard: React.FC<PersonProps> = ({ person }) => {
   return (
-    <Card className="person-card d-flex flex-row flex-wrap">
+    <Card className="person-card d-flex flex-row flex-wrap" border="warning">
       <div className="person-image">
         <Card.Img variant="top" src={person.image_url} />
       </div>
@@ -46,4 +46,4 @@ const SinglePersonCard: React.FC<PersonProps> = ({ person }) => {
   );
 };
 
-export default SinglePersonCard;
+export default PersonDetialCard;

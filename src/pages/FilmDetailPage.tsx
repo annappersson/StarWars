@@ -4,10 +4,10 @@ import { getFilm } from "../services/StarWarsAPI";
 import { useParams } from "react-router";
 import { Alert } from "react-bootstrap";
 import LoadingSpinner from "../components/LoadingSpinner";
-import SingleFilmCard from "../components/FilmDetailCard";
+import FilmDetailCard from "../components/FilmDetailCard";
 import Navigation from "../components/Navigation";
 
-const SingleFilmPage = () => {
+const FilmDetailPage = () => {
   const [getFilmData, setGetFilmData] = useState<Film | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | false>(false);
@@ -52,11 +52,11 @@ const SingleFilmPage = () => {
 
       {!isLoading && getFilmData && (
         <div className="film-container">
-          <SingleFilmCard key={getFilmData.id} film={getFilmData} />
+          <FilmDetailCard key={getFilmData.id} film={getFilmData} />
         </div>
       )}
     </>
   );
 };
 
-export default SingleFilmPage;
+export default FilmDetailPage;

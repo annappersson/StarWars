@@ -24,7 +24,6 @@ const PersonListPage = () => {
 
     try {
       const data = await getAllPeople(pageNumber);
-      setIsLoading(false);
       setGetResult(data);
 
       console.log("Fetched data:", data);

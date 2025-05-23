@@ -7,7 +7,7 @@ interface FilmProps {
   film: Film;
 }
 
-const SingleFilmCard: React.FC<FilmProps> = ({ film }) => {
+const FilmDetailCard: React.FC<FilmProps> = ({ film }) => {
   return (
     <>
       <Card border="warning">
@@ -44,4 +44,4 @@ const SingleFilmCard: React.FC<FilmProps> = ({ film }) => {
   );
 };
 
-export default SingleFilmCard;
+export default FilmDetailCard;
