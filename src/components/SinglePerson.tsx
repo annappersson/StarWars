@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { ApiResponse, Person } from "../types/StarWarsTypes";
+import type { Person } from "../types/StarWarsTypes";
 import { getPerson } from "../services/StarWarsAPI";
 import { useParams } from "react-router";
 import { Alert } from "react-bootstrap";

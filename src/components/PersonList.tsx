@@ -16,13 +16,13 @@ const PersonList = () => {
   const [error, setError] = useState<string | false>(false);
   const [page, setPage] = useState(1);
 
-  const fetchPeople = async () => {
+  const fetchPeople = async (pageNumber: number) => {
     setError(false);
     setIsLoading(true);
     setGetResult(null);
 
     try {
-      const data = await getAllPeople(page);
+      const data = await getAllPeople(pageNumber);
       setIsLoading(false);
       setGetResult(data);
 
@@ -39,7 +39,7 @@ const PersonList = () => {
   };
 
   useEffect(() => {
-    fetchPeople();
+    fetchPeople(page);
   }, [page]);
 
   return (

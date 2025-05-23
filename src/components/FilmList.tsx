@@ -6,7 +6,7 @@ import Pagination from "./Pagination";
 import LoadingSpinner from "./LoadingSpinner";
 import { getAllFilms } from "../services/StarWarsAPI";
 import FilmCard from "./FilmCard";
-import "../assets/scss/PersonListPage.scss";
+import "../assets/scss/FilmListPage.scss";
 
 const FilmList = () => {
   const [getResult, setGetResult] = useState<ApiResponse<Film[]> | null>(null);
@@ -14,13 +14,13 @@ const FilmList = () => {
   const [error, setError] = useState<string | false>(false);
   const [page, setPage] = useState(1);
 
-  const fetchFilm = async () => {
+  const fetchFilm = async (pageNumber: number) => {
     setError(false);
     setIsLoading(true);
     setGetResult(null);
 
     try {
-      const data = await getAllFilms(page);
+      const data = await getAllFilms(pageNumber);
       setIsLoading(false);
       setGetResult(data);
 
@@ -37,7 +37,7 @@ const FilmList = () => {
   };
 
   useEffect(() => {
-    fetchFilm();
+    fetchFilm(page);
   }, [page]);
 
   return (

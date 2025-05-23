@@ -17,9 +17,24 @@ const SinglePersonCard: React.FC<PersonProps> = ({ person }) => {
           <ListGroup variant="flush" className="mb-3">
             <ListGroup.Item>Birth-Year: {person?.birth_year}</ListGroup.Item>
             <ListGroup.Item>Height: {person?.height} cm</ListGroup.Item>
-            <ListGroup.Item>
-              Films: {person?.films.map((x) => x.title).join(", ")}
-            </ListGroup.Item>
+            <ListGroup className="filmlist">
+              Films:
+              {person?.films.map((films) => (
+                <ListGroup.Item
+                  action
+                  as={Link}
+                  key={films.id}
+                  to={`/films/${films.id}`}
+                >
+                  <span className="film-title">{films.title}</span>
+                </ListGroup.Item>
+              ))}
+            </ListGroup>
+
+            {/* <ListGroup.Item>
+              Films:
+              <ul>{person?.films.map((x) => x.title).join(", ")}</ul>
+            </ListGroup.Item> */}
           </ListGroup>
 
           <div className="mt-auto">
