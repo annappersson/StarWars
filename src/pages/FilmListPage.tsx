@@ -54,7 +54,7 @@ const FilmPage = () => {
 
       {!isLoading && getResult && (
         <>
-          <div className="film-container">
+          <div className="filmList-container">
             {getResult.data.map((film) => (
               <FilmCard key={film.id} film={film} />
             ))}

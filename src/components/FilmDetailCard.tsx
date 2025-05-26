@@ -49,7 +49,7 @@ const FilmDetailCard: React.FC<FilmProps> = ({ film }) => {
         </div>
 
         <div className="mt-auto">
-          <Link to="/films" className="btn btn-secondary" role="button">
+          <Link to="/films" className="btn btn-secondary backBtn" role="button">
             {" "}
             Go back
           </Link>

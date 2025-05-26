@@ -1,26 +1,24 @@
 @import "bootstrap/scss/bootstrap";
 @import "HomePage.scss";
 
-
-.spinner {
-  top: 0;
-  left: 0;
-  width: 100vw;
-  min-height: calc(100vh - 64px);
+.spinner{
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background-color: black;
-
-  .img-fluid{
-    max-width: 80%;
-    height: auto;
-    margin-bottom: 1rem;
+  
+}
+  .spinner img{
+    height: 80%;
   }
 
   .loader {
-    margin: auto;
     display: block;
     text-align: center;
     color: $text-color;
@@ -51,4 +49,3 @@
       box-shadow: 10px 0 white, 20px 0 white;
     }
   }
-}
