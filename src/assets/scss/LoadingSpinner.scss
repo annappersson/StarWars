@@ -1,46 +1,53 @@
 @import "bootstrap/scss/bootstrap";
 @import "HomePage.scss";
 
-.spinner-container {
-  min-height: 100vh;
-  background-color: black;
-  margin: auto;
-  text-align: center;
-  overflow: hidden; 
-}
 
 .spinner {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-}
+  background-color: black;
 
-.loader {
-  color: $text-color;
-  font-family: "Orbitron", sans-serif;
-  font-size: 1.5rem; 
-  position: relative;
-}
-
-.loader::after {
-  content: '';
-  width: 5px;
-  height: 5px;
-  background: currentColor;
-  position: absolute;
-  bottom: 10px;
-  right: -5px;
-  animation: animloader 1s linear infinite;
-}
-
-@keyframes animloader {
-  0% {
-    box-shadow: 10px 0 rgba(255, 255, 255, 0), 20px 0 rgba(255, 255, 255, 0);
+  .img-fluid{
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 1rem;
   }
-  50% {
-    box-shadow: 10px 0 white, 20px 0 rgba(255, 255, 255, 0);
+
+  .loader {
+    display: block;
+    text-align: center;
+    color: $text-color;
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.5rem; 
+    position: relative;
   }
-  100% {
-    box-shadow: 10px 0 white, 20px 0 white;
+
+  .loader::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: currentColor;
+    position: absolute;
+    bottom: 10px;
+    right: -5px;
+    animation: animloader 1s linear infinite;
+  }
+  
+  @keyframes animloader {
+    0% {
+      box-shadow: 10px 0 rgba(255, 255, 255, 0), 20px 0 rgba(255, 255, 255, 0);
+    }
+    50% {
+      box-shadow: 10px 0 white, 20px 0 rgba(255, 255, 255, 0);
+    }
+    100% {
+      box-shadow: 10px 0 white, 20px 0 white;
+    }
   }
 }

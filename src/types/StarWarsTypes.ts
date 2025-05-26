@@ -5,14 +5,9 @@ export interface Person {
   birth_year: string;
   eye_color: string;
   hair_color: string;
-  films: FilmTitle[];
+  films: Film[];
   image_url: string;
 }
-
-export type FilmTitle = {
-  id: number;
-  title: string;
-};
 
 export interface Film {
   id: number;
@@ -24,11 +19,6 @@ export interface Film {
   image_url: string;
   release_date: string;
 }
-
-export type PersonName = {
-  id: number;
-  name: string;
-};
 
 export interface ApiResponse<T> {
   current_page: number;
