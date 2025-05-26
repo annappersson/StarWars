@@ -6,7 +6,7 @@ import "../assets/scss/LoadingSpinner.scss";
 import "../assets/scss/PersonListPage.scss";
 import Pagination from "../components/Pagination";
 import LoadingSpinner from "../components/LoadingSpinner";
-import PersonCard from "../components/PersonCard";
+import PersonCard from "../components/PeopleCard";
 import Navigation from "../components/Navigation";
 import vaderKitty from "../assets/img/catVader.gif";
 
