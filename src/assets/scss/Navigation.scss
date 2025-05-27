@@ -7,9 +7,9 @@
     width: 4rem;
 }
 
-.navbar {
+.navBar {
+    position: relative;
     margin: 0 auto;
-    position: sticky;
     top: 0;
     z-index: 3;
     font-family: "Julius Sans One", sans-serif;

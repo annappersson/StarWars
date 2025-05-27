@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "check:0-lint": "eslint .",
+    "check:1-tsc": "tsc --noEmit",
+    "check:2-type-coverage": "type-coverage -p ./tsconfig.app.json --at-least 100",
+    "check": "run-s check:*",
     "preview": "vite preview"
   },
   "dependencies": {
