@@ -9,6 +9,7 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import PersonCard from "../components/PeopleCard";
 import Navigation from "../components/Navigation";
 import vaderKitty from "../assets/img/catVader.gif";
+import darkSidevader from "../assets/img/darthvader1.gif";
 
 const PersonListPage = () => {
   const [getResult, setGetResult] = useState<ApiResponse<Person[]> | null>(
@@ -25,6 +26,7 @@ const PersonListPage = () => {
 
     try {
       const data = await getAllPeople(pageNumber);
+
       setGetResult(data);
 
       console.log("Fetched data:", data);
@@ -33,7 +35,7 @@ const PersonListPage = () => {
       setError(
         err instanceof Error
           ? err.message
-          : "Something went wrong in the galaxy"
+          : "Something went wrong in the galaxy, you are on your way to the dark side.."
       );
     }
     setIsLoading(false);
@@ -48,7 +50,12 @@ const PersonListPage = () => {
       <Navigation />
       {isLoading && <LoadingSpinner />}
 
-      {!isLoading && error && <Alert variant="danger">{error}</Alert>}
+      {!isLoading && error && (
+        <div className="danger">
+          <Image src={darkSidevader} alt="Darth Vader" />
+          <Alert variant="danger">{error}</Alert>
+        </div>
+      )}
 
       {!isLoading && !error && !getResult && (
         <>

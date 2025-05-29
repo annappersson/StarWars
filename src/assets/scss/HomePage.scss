@@ -23,7 +23,7 @@ html, body{
 }
 
 body{
-    background-image: url("../img//space-background1.png");
+    background-image: url("../img/3d-space-sky-background.jpg");
     background-size: cover;
 }
 
@@ -68,7 +68,7 @@ body{
 }
 
 .btn-secondary:hover {
-    cursor: url("/img/cursorYellow.cur"), auto;
+    cursor: url("/img/cursorRed.cur"), auto;
     background-color: $heading-color !important;
     color: $btn-color !important;
     border: 1px solid $heading-color !important;
@@ -92,7 +92,14 @@ body{
     letter-spacing: .1rem;
     text-transform: uppercase;
     font-weight: 200;
+    animation: fadeIn 5s;
 }
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
 
 
 .h1-style{
@@ -149,4 +156,14 @@ body{
 
   .waring img{
     width: 50%;
+  }
+
+  .danger {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    text-align: center;
   }

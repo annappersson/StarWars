@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import type { Film } from "../types/StarWarsTypes";
 import { getFilm } from "../services/StarWarsAPI";
 import { useParams } from "react-router";
-import { Alert } from "react-bootstrap";
+import { Alert, Image } from "react-bootstrap";
 import LoadingSpinner from "../components/LoadingSpinner";
 import FilmDetailCard from "../components/FilmDetailCard";
 import Navigation from "../components/Navigation";
+import darkSidevader from "../assets/img/darthvader1.gif";
+import vaderKitty from "../assets/img/catVader.gif";
 
 const FilmDetailPage = () => {
   const [getFilmData, setGetFilmData] = useState<Film | null>(null);
@@ -44,10 +46,20 @@ const FilmDetailPage = () => {
       <Navigation />
       {isLoading && <LoadingSpinner />}
 
-      {!isLoading && error && <Alert variant="danger">{error}</Alert>}
+      {!isLoading && error && (
+        <div className="danger">
+          <Image src={darkSidevader} alt="Darth Vader" />
+          <Alert variant="danger">{error}</Alert>
+        </div>
+      )}
 
       {!isLoading && !error && !getFilmData && (
-        <Alert variant="warning">no film 😩</Alert>
+        <>
+          <div className="waring">
+            <Image src={vaderKitty} alt="A kitty holding lightsaber" />
+            <Alert variant="warning">no film found in this galaxy😩</Alert>
+          </div>
+        </>
       )}
 
       {!isLoading && getFilmData && (

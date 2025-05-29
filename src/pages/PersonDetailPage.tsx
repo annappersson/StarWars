@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import type { Person } from "../types/StarWarsTypes";
 import { getPerson } from "../services/StarWarsAPI";
 import { useParams } from "react-router";
-import { Alert } from "react-bootstrap";
+import { Alert, Image } from "react-bootstrap";
 import LoadingSpinner from "../components/LoadingSpinner";
 import PersonDetailCard from "../components/PersonDetailCard";
 import "../assets/scss/PersonDetailPage.scss";
 import Navigation from "../components/Navigation";
+import darkSidevader from "../assets/img/darthvader1.gif";
+import vaderKitty from "../assets/img/catVader.gif";
 
 const PersonDetailPage = () => {
   const [getPersonData, setGetPersonData] = useState<Person | null>(null);
@@ -45,10 +47,20 @@ const PersonDetailPage = () => {
       <Navigation />
       {isLoading && <LoadingSpinner />}
 
-      {!isLoading && error && <Alert variant="danger">{error}</Alert>}
+      {!isLoading && error && (
+        <div className="danger">
+          <Image src={darkSidevader} alt="Darth Vader" />
+          <Alert variant="danger">{error}</Alert>
+        </div>
+      )}
 
       {!isLoading && !error && !getPersonData && (
-        <Alert variant="warning">no people 😩</Alert>
+        <>
+          <div className="waring">
+            <Image src={vaderKitty} alt="A kitty holding lightsaber" />
+            <Alert variant="warning">no people found in this galaxy😩</Alert>
+          </div>
+        </>
       )}
 
       {!isLoading && getPersonData && (

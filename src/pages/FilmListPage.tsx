@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type { ApiResponse, Film } from "../types/StarWarsTypes";
-import { Alert } from "react-bootstrap";
+import { Alert, Image } from "react-bootstrap";
 import "../assets/scss/LoadingSpinner.scss";
 import Pagination from "../components/Pagination";
 import LoadingSpinner from "../components/LoadingSpinner";
@@ -8,6 +8,8 @@ import { getAllFilms } from "../services/StarWarsAPI";
 import FilmCard from "../components/FilmCard";
 import "../assets/scss/FilmListPage.scss";
 import Navigation from "../components/Navigation";
+import darkSidevader from "../assets/img/darthvader1.gif";
+import vaderKitty from "../assets/img/catVader.gif";
 
 const FilmPage = () => {
   const [getResult, setGetResult] = useState<ApiResponse<Film[]> | null>(null);
@@ -46,10 +48,20 @@ const FilmPage = () => {
       <Navigation />
       {isLoading && <LoadingSpinner />}
 
-      {!isLoading && error && <Alert variant="danger">{error}</Alert>}
+      {!isLoading && error && (
+        <div className="danger">
+          <Image src={darkSidevader} alt="Darth Vader" />
+          <Alert variant="danger">{error}</Alert>
+        </div>
+      )}
 
       {!isLoading && !error && !getResult && (
-        <Alert variant="warning">no films 😩</Alert>
+        <>
+          <div className="waring">
+            <Image src={vaderKitty} alt="A kitty holding lightsaber" />
+            <Alert variant="warning">no films found in this galaxy😩</Alert>
+          </div>
+        </>
       )}
 
       {!isLoading && getResult && (
