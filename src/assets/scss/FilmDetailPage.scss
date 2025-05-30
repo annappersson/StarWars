@@ -3,76 +3,81 @@
 
 
 .film-container {
-    min-height: calc(100vh - 64px);
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: $text-color;
+}
+
+.filmCardContainer{
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.film-card {
+  width: 100%;
+  max-width: 60rem; 
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+}
+
+.film-image {
+    flex: 1 1 50%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    color: $text-color;
-  }
-
-  .filmCardContainer{
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  }
-
-  .film-card {
-    width: 100%;
-    max-width: 60rem; 
-    display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    
-  
-    .film-image {
-      flex: 1 1 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  
-      .film-image img {
-        max-width: 100%;
-        height: auto;
-        object-fit: cover;
-      }
-    }
-  
-    .film-info {
-      flex: 1 1 50%;
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .film-title{
-        font-family: "Orbitron", sans-serif;
-        font-size: 2,5rem;
-    }
-
-
 }
 
-.backBtn{
-    margin: 1rem;
-    display: flex;
-    justify-self: center;
-    align-self: center;
+.film-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 
+.film-info {
+  flex: 1 1 50%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
 
+.film-title{
+    font-family: "Orbitron", sans-serif;
+    font-size: 2,5rem;
+}
+
+#FilmBtn{
+  margin: 1rem;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  background-color: $btn-color;  
+  color: $heading-color;
+  border: 1px solid $heading-color;
+}
+
+#FilmBtn:hover{
+  cursor: url("/img/cursorRed.cur"), auto;
+  background-color: $heading-color;
+  color: $btn-color;
+  border: 1px solid $heading-color;
+}
 
 .character-title{
-    font-size: 1,25rem;
-    margin-top: 2rem;
-    text-align: center;
-    font-family: "Orbitron", sans-serif;
+  font-size: 1,25rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
 }
 
-  @media (max-width: 768px) {
-    .film-card {
-      flex-direction: column !important;
-    }
+@media (max-width: 768px) {
+  .film-card {
+    flex-direction: column !important;
   }
-  
+}

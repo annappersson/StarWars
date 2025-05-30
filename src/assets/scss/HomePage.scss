@@ -61,25 +61,19 @@ body{
     margin: 0;
 }
 
-.btn-secondary {
-    background-color: $btn-color !important;  
-    color: $heading-color !important;
-    border: 1px solid $heading-color !important;
+#HomeBtn {
+    background-color: $btn-color;  
+    color: $heading-color;
+    border: 1px solid $heading-color;
 }
 
-.btn-secondary:hover {
+#HomeBtn:hover {
     cursor: url("/img/cursorRed.cur"), auto;
-    background-color: $heading-color !important;
-    color: $btn-color !important;
-    border: 1px solid $heading-color !important;
+    background-color: $heading-color;
+    color: $btn-color;
+    border: 1px solid $heading-color;
 }
 
-.listButton:hover{
-    cursor: url("/img/cursorYellow.cur"), auto;
-    background-color: $heading-color !important;
-    color: $btn-color !important;
-    border: 1px solid $heading-color !important;
-}
 
 .intro-text {
     display: block;
@@ -124,20 +118,20 @@ body{
     height: auto;
     display: block;
     background-size: cover;
-  }
-  
-  .stars {
+}
+
+.stars {
     background:#000 url("../img/stars.png") repeat top center;
     z-index:0;
-  }
-  
-  .twinkling{
+}
+
+.twinkling{
     background:transparent url("../img/twinkling.png") repeat top center;
     z-index:1;
     animation:move-twink-back 200s linear infinite;
-  }
+}
 
-  .waring{
+.waring{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -148,17 +142,17 @@ body{
     margin: 0 auto;
     box-sizing: border-box;
     margin: auto;
-  }
+}
 
-  .alert-waring{
+.alert-waring{
     width: 50%;
-  }
+}
 
-  .waring img{
+.waring img{
     width: 50%;
-  }
+}
 
-  .danger {
+.danger {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -166,4 +160,4 @@ body{
     align-content: center;
     margin: auto;
     text-align: center;
-  }
+}

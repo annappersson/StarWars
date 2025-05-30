@@ -14,38 +14,39 @@
   background-color: black;
   
 }
-  .spinner img{
-    height: 80%;
-  }
 
-  .loader {
-    display: block;
-    text-align: center;
-    color: $text-color;
-    font-family: "Orbitron", sans-serif;
-    font-size: 1.5rem; 
-    position: relative;
-  }
+.spinner img{
+  max-height: 80%;
+}
 
-  .loader::after {
-    content: '';
-    width: 5px;
-    height: 5px;
-    background: currentColor;
-    position: absolute;
-    bottom: 10px;
-    right: -5px;
-    animation: animloader 1s linear infinite;
+.loader {
+  display: block;
+  text-align: center;
+  color: $text-color;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.5rem; 
+  position: relative;
+}
+
+.loader::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: currentColor;
+  position: absolute;
+  bottom: 10px;
+  right: -5px;
+  animation: animloader 1s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow: 10px 0 rgba(255, 255, 255, 0), 20px 0 rgba(255, 255, 255, 0);
   }
-  
-  @keyframes animloader {
-    0% {
-      box-shadow: 10px 0 rgba(255, 255, 255, 0), 20px 0 rgba(255, 255, 255, 0);
-    }
-    50% {
-      box-shadow: 10px 0 white, 20px 0 rgba(255, 255, 255, 0);
-    }
-    100% {
-      box-shadow: 10px 0 white, 20px 0 white;
-    }
+  50% {
+    box-shadow: 10px 0 white, 20px 0 rgba(255, 255, 255, 0);
   }
+  100% {
+    box-shadow: 10px 0 white, 20px 0 white;
+  }
+}

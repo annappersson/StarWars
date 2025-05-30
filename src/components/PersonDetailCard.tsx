@@ -41,7 +41,12 @@ const PersonDetialCard: React.FC<PersonProps> = ({ person }) => {
         </div>
 
         <div className="mt-auto">
-          <Link to="/people" className="btn btn-secondary" role="button">
+          <Link
+            to="/people"
+            id="PersonBtn"
+            className="btn btn-secondary"
+            role="button"
+          >
             {" "}
             Go back
           </Link>

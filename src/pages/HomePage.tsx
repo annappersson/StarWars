@@ -16,7 +16,12 @@ export const HomePage = () => {
       <div className="stars"></div>
       <div className="twinkling"></div>
       <div className="button-container">
-        <Link to="/Main" className="button btn btn-secondary" role="button">
+        <Link
+          to="/Main"
+          id="HomeBtn"
+          className="btn btn-secondary"
+          role="button"
+        >
           {" "}
           Lets fly!🚀
         </Link>

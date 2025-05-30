@@ -15,6 +15,20 @@
   }
 }
 
+#PeopleListBtn{
+  background-color: $btn-color;  
+  color: $heading-color;
+  border: 1px solid $heading-color;
+}
+
+#PeopleListBtn:hover {
+  cursor: url("/img/cursorRed.cur"), auto;
+  background-color: $heading-color;
+  color: $btn-color;
+  border: 1px solid $heading-color;
+}
+
+
 
 .person-container {
     width: 100%;

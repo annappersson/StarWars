@@ -21,6 +21,7 @@ const PersonCard: React.FC<PersonProps> = ({ person }) => {
 
         <div className="mt-auto">
           <Nav.Link
+            id="PeopleListBtn"
             as={NavLink}
             key={person.id}
             to={`/people/${person.id}`}

@@ -19,6 +19,7 @@ const FilmCard: React.FC<FilmProps> = ({ film }) => {
 
         <div className="mt-auto">
           <Nav.Link
+            id="FilmsBtn"
             as={NavLink}
             key={film.id}
             to={`/films/${film.id}`}
