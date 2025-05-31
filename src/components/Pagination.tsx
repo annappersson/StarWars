@@ -20,7 +20,7 @@ const Pagination: React.FC<PaginationProps> = ({
   onPreviousPage,
 }) => {
   return (
-    <>
+    <div className="PaginationContainer">
       <div className="prev">
         <Button
           disabled={!hasPreviousPage}
@@ -45,7 +45,7 @@ const Pagination: React.FC<PaginationProps> = ({
           Next Page
         </Button>
       </div>
-    </>
+    </div>
   );
 };
 

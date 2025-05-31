@@ -2,13 +2,13 @@
 @import "HomePage.scss";
 @import "PersonListPage.scss";
 
-#buttons {
+.PaginationContainer{
+    bottom: 0;
     background-color: black;
     padding: 2rem;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-content: center;
     gap: 1rem;
     color: $text-color;
 }
