@@ -1,4 +1,4 @@
-import { Card, CardGroup, ListGroup, Nav } from "react-bootstrap";
+import { Card, ListGroup, Nav } from "react-bootstrap";
 import type { Person } from "../types/StarWarsTypes";
 import { NavLink } from "react-router";
 
