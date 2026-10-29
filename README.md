@@ -1,35 +1,92 @@
-# Star Wars Encyclopedia
+# 🌌 Star Wars Encyclopedia
 
-A responsive Star Wars encyclopedia built with React and TypeScript.
-Browse, search and explore characters, films and other resources from the Star Wars universe.
+**Explore a galaxy far, far away.**
 
-## Live Demo
+Star Wars Encyclopedia is a responsive web application built with React and TypeScript that lets users explore the Star Wars universe. Browse characters, films and other resources, navigate between related information, and discover details about the galaxy's most iconic stories and characters.
 
-https://star-wars-seven-alpha.vercel.app/ 
+The project was developed as part of my Frontend Developer education, focusing on API integration, component-based development, routing and creating an intuitive user experience.
 
-## Tech Stack
+## 🌐 Live Demo
 
-React · TypeScript · React Router · Axios · Vite
+[**Explore Star Wars Encyclopedia →**](https://star-wars-seven-alpha.vercel.app/)
 
-## Features
+## ✨ Features
 
-* Browse multiple Star Wars resources
-* Detail pages with related links
-* Search and pagination with URL parameters
-* Loading states and error handling
-* Responsive design
+- **Explore the Star Wars Universe** — Browse multiple categories of Star Wars resources.
+- **Detailed Views** — Explore individual resources and navigate to related information.
+- **Search** — Find specific resources using the application's search functionality.
+- **URL-Based Navigation** — Use URL parameters to manage search queries and pagination.
+- **Pagination** — Navigate through larger collections of resources.
+- **Loading States** — Display loading feedback while fetching data.
+- **Error Handling** — Handle API errors and unsuccessful requests.
+- **Responsive Design** — Enjoy the application across desktop, tablet and mobile devices.
 
-## About
+## 🛠️ Tech Stack
 
-This project was built as part of a frontend development course, focusing on component structure, routing and API integration.
+- **React** — Building reusable and interactive UI components.
+- **TypeScript** — Type-safe development and improved code maintainability.
+- **React Router** — Client-side routing and navigation between pages.
+- **Axios** — Making HTTP requests and retrieving data from an external API.
+- **Vite** — Development server and production build tooling.
 
-## Run locally
+## 🚀 Getting Started
 
-```bash
-npm install
-npm run dev
-```
+Follow these steps to run the project locally.
 
-## Author
+### Prerequisites
 
-Anna Persson
+- [Node.js](https://nodejs.org/)
+- npm
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone <repository-url>
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd <project-folder>
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL displayed in your terminal.
+
+## 📚 What I Learned
+
+Developing Star Wars Encyclopedia gave me practical experience building a multi-page React application that retrieves and displays data from an external API.
+
+Key areas of learning included:
+
+- Fetching and displaying API data using Axios.
+- Structuring an application with reusable React components.
+- Implementing client-side routing with React Router.
+- Managing search and pagination through URL parameters.
+- Handling asynchronous requests, loading states and errors.
+- Building a responsive interface with a focus on usability and navigation.
+
+## 🔗 Data Source
+
+The application retrieves Star Wars data from an external API.
+
+## 👩‍💻 Author
+
+**Anna Persson**
+
+Frontend Developer
+
+[GitHub](https://github.com/annappersson)
